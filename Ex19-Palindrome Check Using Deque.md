@@ -31,30 +31,26 @@ import java.util.*;
 public class PalindromeChecker {
     
     public static boolean isPalindrome(String message) {
-        // Convert to lowercase and remove non-alphanumeric characters
         message = message.toLowerCase().replaceAll("[^a-z0-9]", "");
         
         Deque<Character> deque = new ArrayDeque<>();
         
-        // Add all characters to the deque
         for (char c : message.toCharArray()) {
             deque.addLast(c);
         }
         
-        // Compare characters from both ends
         while (deque.size() > 1) {
             if (deque.pollFirst() != deque.pollLast()) {
                 return false;  // Mismatch found
             }
         }
         
-        return true;  // All characters matched
+        return true;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        //System.out.println("Enter a message:");
         String input = scanner.nextLine();
 
         if (isPalindrome(input)) {
