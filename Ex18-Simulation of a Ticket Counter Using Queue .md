@@ -84,15 +84,8 @@ public class TicketCounter {
         TicketQueue queue = new TicketQueue();
         String command;
 
-        //System.out.println("Ticket Counter Simulation");
-        //System.out.println("Commands: enqueue <name>, dequeue, display, exit");
-
         while (true) {
-            //System.out.print("Enter command: ");
-
-            // Fix for NoSuchElementException
             if (!scanner.hasNextLine()) {
-                //System.out.println("No more input. Exiting simulation.");
                 break;
             }
 
@@ -124,7 +117,7 @@ public class TicketCounter {
             }
         }
 
-        scanner.close(); // Safe close
+        scanner.close();
     }
 }
 
