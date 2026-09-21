@@ -15,7 +15,7 @@ To design a program that sorts a given array of integers in ascending order with
 10. End the program.  
 
 ## Program:
-```
+```java
 /*
 Program tosorts a given array of integers in ascending order without using built-in sorting functions
 Developed by: SURYANARAYANAN T
@@ -31,7 +31,6 @@ public class Solution {
         arr[index2] = temp;
     }
 
-    // Heapify the subtree rooted at index i
     private void heapify(int[] arr, int n, int i) {
         int largest = i; 
         int left = 2 * i + 1;
@@ -68,16 +67,13 @@ public class Solution {
         return nums;
     }
 
-    // ------------------ MAIN METHOD ------------------
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Solution solution = new Solution();
 
-        //System.out.println("Enter number of elements:");
         int n = sc.nextInt();
         
         int[] nums = new int[n];
-        //System.out.println("Enter " + n + " elements:");
         for (int i = 0; i < n; i++) {
             nums[i] = sc.nextInt();
         }
